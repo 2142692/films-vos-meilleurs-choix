@@ -1,36 +1,8 @@
 @use 'partials/top-picks';
-@use 'partials/gerer-styles';
+@use 'partials/card';
 @use 'partials/variables';
 @use 'partials/mixins/text';
 @use "sass:color";
 
 body { background-color: variables.$primary; 
-.card {
-    margin: 5px;
-    &__btn{
-        
-    width: 100%;
-    margin-top: 5px;
-    border: none;
-    background-color: variables.$primary;
-    padding:5px;
-        background-color: color.adjust(variables.$primary, $lightness: 15%); 
-        color: color.complement(variables.$primary);
-        @include text.small-cap;
-    }
-    &__btn:hover{
-        background-color: variables.$primary;
-    
-        background-color: color.adjust(variables.$primary, $lightness: 25%); 
-      }
-}
-
-.top-picks{
-    background-color: color.adjust(variables.$primary, $lightness: 5%); 
-    &__header{
-        color: white;
-        @include text.small-cap;
-    }
-}
-
 }

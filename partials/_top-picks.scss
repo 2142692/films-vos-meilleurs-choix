@@ -1,13 +1,16 @@
 @use "variables";
-
+@use 'mixins/text';
+@use "sass:color";
 
 .top-picks { 
   position: relative;
   padding: 50px; 
-
+  background-color: color.adjust(variables.$primary, $lightness: 5%); 
   &__header {
     border-left: solid 5px variables.$primary;
     padding-left: 20px;
+    color: white;
+    @include text.small-cap;
   }
 
   &__title {
